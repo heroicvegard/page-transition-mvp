@@ -1,6 +1,8 @@
 "use client";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Transition from "../components/Transition";
 import "./globals.css";
 
 export default function RootLayout({
@@ -8,6 +10,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
   return (
     <html lang="en">
       <body className="flex flex-col p-4">
@@ -20,7 +23,7 @@ export default function RootLayout({
           </Link>
         </nav>
         <AnimatePresence initial={false} mode="wait">
-          {children}
+          <Transition key={pathname}>{children}</Transition>
         </AnimatePresence>
       </body>
     </html>

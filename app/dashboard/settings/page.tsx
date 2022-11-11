@@ -1,7 +1,5 @@
-import Transition from "../../../components/Transition";
-
 const Settings = () => (
-  <Transition>
+  <>
     <h1 className="mb-4">Settings</h1>
     <div>
       <input type="text" />
@@ -9,6 +7,6 @@ const Settings = () => (
         This is some setting shit info
       </div>
     </div>
-  </Transition>
+  </>
 );
 export default Settings;

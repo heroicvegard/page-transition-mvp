@@ -1,7 +1,5 @@
-import Transition from "../../../components/Transition";
-
 const Profile = () => (
-  <Transition>
+  <>
     <h1 className="mb-4">Profile</h1>
     <div>
       <input type="text" />
@@ -18,7 +16,7 @@ const Profile = () => (
         This is some profile info
       </div>
     </div>
-  </Transition>
+  </>
 );
 
 export default Profile;
